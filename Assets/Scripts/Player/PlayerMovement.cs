@@ -52,8 +52,36 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        // Moved code from update into its own function to be called from PlayerController
+        // Will review and move back if necessary
         
+        //isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
+        ////RaycastHit hit;
+        ////float radius = 5f;
+        ////Ray landingRay = new Ray(groundCheck.position, Vector3.down);
+
+        ////isGrounded = Physics.SphereCast(landingRay, radius, out hit,2f);
+        //isGrounded = Physics.BoxCast(groundCheck.position, transform.localScale, Vector3.down);
+
+       
+        
+
+        ////isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, groundDistance);
+
+        //GroundedReset();
+
+        //BaseMovement();
+
+        //if (Input.GetButtonDown("Jump") && GroundCheck())
+        //{
+        //    Jump();
+        //}
+
+        //ApplyVelocity();
+    }
+
+    public void MovementUpdate()
+    {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance);
         //RaycastHit hit;
         //float radius = 5f;
@@ -62,8 +90,8 @@ public class PlayerMovement : MonoBehaviour
         //isGrounded = Physics.SphereCast(landingRay, radius, out hit,2f);
         isGrounded = Physics.BoxCast(groundCheck.position, transform.localScale, Vector3.down);
 
-       
-        
+
+
 
         //isGrounded = Physics.Raycast(groundCheck.position, Vector3.down, groundDistance);
 
