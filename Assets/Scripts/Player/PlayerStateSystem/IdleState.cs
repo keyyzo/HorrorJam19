@@ -21,7 +21,7 @@ public class IdleState : IState
         
     }
 
-    public void Update()
+    public void Execute()
     {
         
     }

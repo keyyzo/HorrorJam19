@@ -38,13 +38,16 @@ public class PlayerStateMachine : BaseStateMachine
         CurrentState.Exit();
         CurrentState = nextState;
         nextState.Enter();
+
+        // Let other objects know that the current state has changed
+        stateChanged?.Invoke(nextState);
     }
 
-    public override void Update()
+    public override void Execute()
     {
         if (CurrentState != null)
         { 
-            CurrentState.Update();
+            CurrentState.Execute();
         }
     }
 }

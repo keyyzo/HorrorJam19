@@ -6,6 +6,6 @@ public abstract class BaseStateMachine
 {
     public abstract void Initialize(IState startingState);
     public abstract void TransitionTo(IState nextState);
-    public abstract void Update();
+    public abstract void Execute();
     
 }

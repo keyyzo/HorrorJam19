@@ -21,7 +21,7 @@ public class WalkState : IState
 
     }
 
-    public void Update()
+    public void Execute()
     {
 
     }

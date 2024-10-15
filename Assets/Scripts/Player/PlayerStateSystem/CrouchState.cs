@@ -21,7 +21,7 @@ public class CrouchState : IState
 
     }
 
-    public void Update()
+    public void Execute()
     {
 
     }

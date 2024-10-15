@@ -21,7 +21,7 @@ public class RunState : IState
 
     }
 
-    public void Update()
+    public void Execute()
     {
 
     }
